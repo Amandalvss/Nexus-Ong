@@ -4,56 +4,61 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Projetos | Nexus ONG</title>
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
   <!-- CABEÇALHO / MENU -->
   <header>
-    <h1>Nexus Ong</h1>
-    <nav>
-      <ul>
-        <li><a href="index.html">Início</a></li>
-        <li><a href="projetos.html">Projetos</a></li>
-        <li><a href="cadastro.html">Cadastro</a></li>
-      </ul>
-    </nav>
+    <div class="header-container">
+      <h1 class="logo">NEXUS ONG</h1>
+      <nav>
+        <ul class="menu">
+          <li><a href="index.html">Início</a></li>
+          <li><a href="projetos.html">Projetos</a></li>
+          <li><a href="cadastro.html">Cadastro</a></li>
+        </ul>
+        <button class="hamburger" aria-label="Abrir menu">&#9776;</button>
+      </nav>
+    </div>
   </header>
 
   <!-- CONTEÚDO PRINCIPAL -->
-  <main>
+  <main class="container">
     <h2>Nossos Projetos e Parcerias</h2>
     <p>A Nexus Ong conecta diversas ONGs e iniciativas que promovem impacto social, ambiental e educacional. Conheça alguns projetos que fazem parte da nossa rede de solidariedade:</p>
 
     <!-- PROJETO 1 -->
-    <section>
-      <h3> Rosas Brancas </h3>
+    <section class="card-projeto">
+      <h3>Rosas Brancas</h3>
       <picture>
         <source srcset="img/projeto1.webp" type="image/webp">
-        <source srcset="img/projeto1.png" type="image/png">
-        <img src="img/projeto1.png" alt="Crianças aprendendo sobre jardinagem e reciclagem" width="300" loading="lazy">
+        <img src="img/projeto1.png" alt="Crianças aprendendo sobre jardinagem e reciclagem">
       </picture>
       <p>Voltado à educação ambiental de crianças em comunidades carentes. Ensina práticas de reciclagem, jardinagem e cuidado com o meio ambiente.</p>
-      <p><strong>Local:</strong> Rio de Janeiro, RJ</p>
-      <p><strong>Atuação:</strong> Educação e Sustentabilidade</p>
-      <p><strong>Contato:</strong> Rosasbrancas@nexusong.org</p>
+      <ul>
+        <li><strong>Local:</strong> Rio de Janeiro, RJ</li>
+        <li><strong>Atuação:</strong> Educação e Sustentabilidade</li>
+        <li><strong>Contato:</strong> Rosasbrancas@nexusong.org</li>
+      </ul>
     </section>
-
-    <hr>
 
     <!-- PROJETO 2 -->
-    <section>
-      <h3>☀️ Luz da Esperança </h3>
+    <section class="card-projeto">
+      <h3>Luz da Esperança</h3>
       <picture>
         <source srcset="img/projeto2.webp" type="image/webp">
-        <source srcset="img/projeto2.png" type="image/png">
-        <img src="img/projeto2.png" alt="Entrega de cestas básicas e oficinas de capacitação" width="300" loading="lazy">
+        <img src="img/projeto2.png" alt="Entrega de cestas básicas e oficinas de capacitação">
       </picture>
       <p>Projeto que fornece cestas básicas, apoio psicológico e oficinas de capacitação profissional para famílias em situação de vulnerabilidade.</p>
-      <p><strong>Local:</strong> Minas Gerais/MG</p>
-      <p><strong>Atuação:</strong> Inclusão Social</p>
-      <p><strong>Contato:</strong> Luzdaesperança@nexusong.org</p>
+      <ul>
+        <li><strong>Local:</strong> Minas Gerais/MG</li>
+        <li><strong>Atuação:</strong> Inclusão Social</li>
+        <li><strong>Contato:</strong> Luzdaesperança@nexusong.org</li>
+      </ul>
     </section>
 
-    <section>
+    <!-- COMO AJUDAR -->
+    <section class="como-ajudar">
       <h3>Como Ajudar?</h3>
       <p>Você pode apoiar esses e outros projetos cadastrando-se como <a href="cadastro.html">voluntário</a> ou realizando uma doação para fortalecer as ações sociais em todo o Brasil.</p>
     </section>
@@ -61,9 +66,11 @@
 
   <!-- RODAPÉ -->
   <footer>
-    <p>&copy; 2025 NexusOng - Todos os direitos reservados</p>
+    <p>&copy; 2025 Nexus Ong - Todos os direitos reservados</p>
     <p>Email: contato@NexusOng.org | Tel: (21) 98999-7687</p>
     <p>Rua Barbeiro, 150 - Rio de Janeiro/RJ</p>
   </footer>
+
+  <script src="js/menu.js"></script>
 </body>
 </html>
