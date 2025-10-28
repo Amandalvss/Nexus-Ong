@@ -1,2 +1,20 @@
-# Auto detect text files and perform LF normalization
-* text=auto
+# Normalizar finais de linha para arquivos de texto
+*.html text
+*.css  text
+*.js   text
+*.json text
+*.md   text
+
+# Imagens são binárias
+*.png  binary
+*.jpg  binary
+*.jpeg binary
+*.webp binary
+*.gif  binary
+
+# Outros arquivos binários
+*.pdf  binary
+*.ico  binary
+
+# Garantir que scripts sempre use LF
+*.sh text eol=lf
