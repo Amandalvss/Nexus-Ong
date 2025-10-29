@@ -1,0 +1,26 @@
+{
+  "name": "nexus-ong",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Site da Nexus ONG - entrega final com acessibilidade e preparação para produção",
+  "scripts": {
+    "start": "python -m http.server 8000",
+    "clean": "rimraf dist",
+    "build:css": "postcss css/style.css -o dist/css/style.min.css --env production",
+    "build:js": "node scripts/build-js.js",
+    "build:html": "node scripts/build-html.js",
+    "build:images": "node scripts/optimize-images.js",
+    "build": "npm run clean && npm run build:css && npm run build:js && npm run build:html && npm run build:images",
+    "lint:css": "postcss css/style.css --report",
+    "test:a11y": "echo \"Run Lighthouse/axe locally (see README)\""
+  },
+  "devDependencies": {
+    "esbuild": "^0.17.19",
+    "postcss": "^8.4.24",
+    "postcss-cli": "^10.1.0",
+    "cssnano": "^5.1.15",
+    "html-minifier-terser": "^7.0.0",
+    "sharp": "^0.32.4",
+    "rimraf": "^5.0.0"
+  }
+}

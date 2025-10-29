@@ -7,20 +7,31 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css">
+  <!-- Prefer use of the production minified stylesheet when available -->
+  <link rel="stylesheet" href="css/style.min.css">
+  <!-- Extra overrides (cute styles, animations) -->
+  <link rel="stylesheet" href="css/style.extra.css">
 </head>
 <body>
+  <!-- Skip link for keyboard users -->
+  <a class="skip-link" href="#spa-root">Ir para o conteúdo principal</a>
   <!-- CABEÇALHO / MENU -->
   <header>
     <div class="header-container">
-      <h1 class="logo">NEXUS ONG</h1>
-      <nav>
+      <div class="brand">
+        <h1 class="logo">NEXUS ONG</h1>
+      </div>
+      <nav aria-label="Menu principal" aria-expanded="false">
         <ul class="menu">
           <li><a href="#inicio" data-link>Início</a></li>
           <li><a href="#projetos" data-link>Projetos</a></li>
           <li><a href="#cadastro" data-link>Cadastro</a></li>
         </ul>
-        <button class="hamburger" aria-label="Abrir menu">&#9776;</button>
+        <div class="header-controls" style="display:flex;gap:8px;align-items:center;margin-left:12px">
+          <button class="btn ghost" type="button" aria-pressed="false" data-theme-toggle title="Alternar tema">Tema</button>
+          <button class="btn ghost" type="button" aria-pressed="false" data-contrast-toggle title="Ativar alto contraste">Alto contraste</button>
+        </div>
+        <button class="hamburger" aria-label="Abrir menu" aria-expanded="false">&#9776;</button>
       </nav>
     </div>
   </header>
@@ -36,6 +47,7 @@
   </footer>
 
   <script src="js/menu.js"></script>
+  <script type="module" src="js/accessibility.js"></script>
   <script type="module" src="js/main.js"></script>
 </body>
 </html>
