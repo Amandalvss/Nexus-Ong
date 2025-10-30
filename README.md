@@ -119,7 +119,7 @@
 
 ### **Acesso Online**
 ```
-https://[seu-usuario].github.io/Nexus-ONG/
+https://amandalvss.github.io/Nexus-Ong/#inicio
 ```
 
 ### **Execução Local**
