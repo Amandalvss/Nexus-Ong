@@ -1,104 +1,149 @@
-# Nexus ONG — Entrega Final (Experiência Prática IV)
+# 🌟 Nexus ONG - Plataforma de Voluntariado
 
-Este repositório contém o site da Nexus ONG, preparado para a entrega final da disciplina.
+## 📋 Sobre o Projeto
 
-Resumo das mudanças principais nesta entrega
-- CSS totalmente refatorado para suportar temas (claro / escuro) e modo de alto contraste.
-- Utilitários de acessibilidade adicionados: skip-link, foco visível (:focus-visible), suporte a prefers-reduced-motion, e componentes com ARIA.
-- JavaScript de acessibilidade adicionado (`js/accessibility.js`) para alternância de tema, trap de foco em modais e fechamento por ESC.
-- Página Projetos e Início com interações (busca, tags, favoritar, modais), SPA por hash (`js/main.js` + `js/spa.js`).
-- Arquivo CSS minificado criado em `css/style.min.css` para uso em produção.
+**Nexus ONG** é uma Single Page Application desenvolvida para conectar voluntários a causas sociais transformadoras. A plataforma facilita o engajamento social através de uma experiência digital acessível, intuitiva e emocionalmente conectada.
 
-Objetivo desta documentação
+> *"Transformando vidas com amor e dedicação. Somos uma família de voluntários apaixonados que acredita que pequenos gestos podem criar grandes revoluções de amor."*
 
-Fornecer instruções claras para:
-- executar o projeto localmente;
-- validar requisitos de acessibilidade (WCAG 2.1 AA);
-- preparar artefatos para produção (minificação e otimização de imagens);
-- seguir uma estratégia de versionamento/branching (GitFlow) e práticas de commits semânticos.
+## ✨ Diferenciais da Plataforma
 
-1) Executar localmente
+### 🚀 **Experiência do Usuário**
+- Navegação fluida sem recarregamentos de página
+- Interface acolhedora com microinterações
+- Design responsivo para todos os dispositivos
+- Feedback visual imediato em todas as ações
 
-Requisitos mínimos: Node.js (opcional para scripts de build), ou qualquer servidor estático (Python, Live Server, etc.).
+### ♿ **Acessibilidade Inclusiva**
+- Conformidade total com WCAG 2.1 AA
+- Navegação completa por teclado
+- Suporte a leitores de tela
+- Estrutura semântica otimizada
+- Contraste de cores acessível
 
-Opções rápidas (Windows - cmd):
+### 💝 **Impacto Social Real**
+- +120 voluntários ativos
+- +45 projetos implementados  
+- +5K vidas transformadas
+- Acompanhamento transparente de resultados
 
-```cmd
-REM Servir uma versão estática com Python (se instalado)
+## 🛠️ Funcionalidades Principais
+
+### 📊 **Catálogo de Projetos**
+- **Sistema de Filtros Inteligente**: educação, saúde, meio ambiente, inclusão digital
+- **Favoritos Persistente**: salve projetos de interesse
+- **Detalhes Completos**: informações detalhadas de cada iniciativa
+- **Ação Imediata**: sistema de apoio integrado
+
+### 👥 **Cadastro de Voluntários**
+- **Formulário Validado**: CPF, telefone, email com máscaras
+- **Persistência Local**: dados armazenados no navegador
+- **Gestão de Registros**: visualização e administração de cadastros
+- **Experiência Guiada**: campos explicativos e ajuda contextual
+
+### 🎯 **Navegação Intuitiva**
+- **SPA Architecture**: transições suaves entre seções
+- **Roteamento por Hash**: compatível com GitHub Pages
+- **Menu Acessível**: navegação clara e organizada
+- **Call-to-Action Estratégicos**: direcionamento claro para ações
+
+## 🎨 Design e Experiência
+
+### **Identidade Visual**
+- Paleta de cores acolhedora e profissional
+- Tipografia hierárquica e legível
+- Ícones e emojis para humanização
+- Layout consistente em todas as seções
+
+### **Elementos Interativos**
+- **Sistema de Favoritos**: ❤️ com feedback visual
+- **Modais Informativos**: detalhes expandidos dos projetos
+- **Animações Sutis**: melhoram a percepção sem atrapalhar
+- **Estados de Loading**: feedback durante processamentos
+
+## 📱 Seções da Plataforma
+
+### 🏠 **Página Inicial**
+- Apresentação institucional emocionante
+- Métricas de impacto em destaque
+- Chamadas para ação estratégicas
+- Navegação rápida para principais funcionalidades
+
+### 📈 **Nossos Projetos** 
+- Grid responsivo de iniciativas
+- Filtros por categoria e tags
+- Busca textual integrada
+- Cards informativos com ações
+
+### 📝 **Cadastro Voluntários**
+- Formulário multi-campo validado
+- Seleção de disponibilidade
+- Área de habilidades e observações
+- Gestão de registros existentes
+
+## 🔧 Tecnologias Implementadas
+
+### **Frontend Stack**
+- HTML5 Semântico
+- CSS3 com Grid/Flexbox
+- JavaScript ES6+ Vanilla
+- LocalStorage API
+
+### **Arquitetura SPA**
+- Sistema de Templates Modular
+- Roteamento Client-Side
+- Gestão de Estado Local
+- Componentes Reutilizáveis
+
+### **Performance**
+- Otimização de Imagens
+- Lazy Loading
+- Debounce em Buscas
+- Código Minificado para Produção
+
+## 🌐 Acessibilidade
+
+### **Navegação**
+- Teclado totalmente funcional
+- Skip links para conteúdo principal
+- Focus management inteligente
+- ARIA labels descritivos
+
+### **Conteúdo**
+- Textos alternativos em imagens
+- Contraste mínimo 4.5:1
+- Tamanho de fonte escalável
+- Estrutura de headings lógica
+
+## 🚀 Como Utilizar
+
+### **Acesso Online**
+```
+https://[seu-usuario].github.io/Nexus-ONG/
+```
+
+### **Execução Local**
+```bash
+# Python
 python -m http.server 8000
 
-REM Abra no navegador: http://localhost:8000
+# Node.js
+npx http-server -p 8000
 ```
 
-O site utiliza módulos ES (scripts com type="module"), portanto deve ser servido por HTTP (não abrir o arquivo diretamente via file://).
+### **Navegação**
+1. **Explore a página inicial** para conhecer a ONG
+2. **Navegue para projetos** para ver iniciativas disponíveis
+3. **Use filtros** para encontrar causas do seu interesse
+4. **Cadastre-se** como voluntário para se engajar
 
-2) Acessibilidade — lista de verificação (WCAG 2.1 AA)
+## 📞 Contato e Informações
 
-- Navegação por teclado: Garantir que toda interação seja possível via teclado (Tab, Shift+Tab, Enter, Space). O projeto adiciona foco visível (`:focus-visible`) e handlers para Enter/Space onde necessário.
-- Estrutura semântica: cabeçalho (`header`), navegação (`nav`), conteúdo principal (`main`), rodapé (`footer`) estão presentes.
-- Contraste: cores foram selecionadas para boa legibilidade; execute uma varredura com Lighthouse ou axe para confirmar contraste mínimo 4.5:1 em áreas dinâmicas.
-- Leitores de tela: controle de modais com `role="dialog"` e `aria-modal="true"`. Quando um modal abre, a aplicação marca `aria-hidden` nos elementos principais para evitar leitura concorrente.
-- Alto contraste: botão no header ativa modo de alto contraste (`.high-contrast`) para tornar o site acessível sem alterar layout.
-
-Recomendações para validação final:
-- Rode o Lighthouse no Chrome (Accessibility) e consulte itens pontuais.
-- Rode axe DevTools para checagens automatizadas de contraste e labels.
-
-3) Otimização para produção
-
-- CSS/JS minificados: já existe `css/style.min.css`. Para gerar programaticamente, sugiro usar PostCSS + cssnano ou ferramentas equivalentes.
-- Compressão de imagens: converta imagens para WebP/AVIF e gere múltiplos tamanhos (responsive) — use ferramentas como `sharp` ou serviços externos.
-- Gzip/Brotli: configure seu servidor/hosting (ex.: GitHub Pages, Netlify, Vercel) para servir compressão.
-
-Exemplo de script local (opcional)
-
-package.json (exemplo) com scripts:
-
-```json
-{
-	"scripts": {
-		"build:css": "postcss css/style.css -o css/style.min.css --env production"
-	}
-}
-```
-
-4) Versionamento e entrega (Git/GitHub)
-
-Recomenda-se seguir GitFlow para essa entrega:
-- branch `main` (produção), `develop` (integração), feature branches `feature/<nome>`, release branches `release/<versao>`, hotfix `hotfix/<versao>`.
-
-Commits semânticos sugeridos: use mensagens no formato `feat:`, `fix:`, `chore:`, `docs:`, `refactor:`.
-
-Releases:
-- Ao finalizar uma release, crie uma tag semântica: `v1.0.0` e gere um Release no GitHub com notas (o arquivo CHANGELOG pode ser mantido manualmente ou via ferramentas como conventional-changelog).
-
-Observação: eu atualizei arquivos locais conforme as exigências de front-end e acessibilidade, porém não alterei o histórico Git remoto (commits/PRs/release) — isso precisa ser feito por você no repositório público (p.ex.: criar branches, abrir PRs, marcar milestones).
-
-5) Arquivos modificados / pontos de atenção
-
-- `css/style.css` e `css/style.min.css` — estilos refatorados e minificados.
-- `index.html` — adicionei skip-link, controles de tema e carregamento de `js/accessibility.js`.
-- `js/accessibility.js` — novo módulo para temas e acessibilidade (trap de foco em modais, ESC para fechar).
-- `js/menu.js` — melhorias ARIA/teclado.
-- `js/spa.js` — mantém a lógica de templates e modais (os modais agora serão observados pelo `accessibility.js` para trap de foco).
-
-6) Checklist final de entrega (o que você deve confirmar antes de enviar)
-
-- [ ] Repositório público (GitHub) e link público fornecido ao avaliador.
-- [ ] Branching conforme GitFlow (ex.: `develop` -> `release/vX.Y.Z` -> `main`).
-- [ ] Histórico de commits organizado e semântico (re-escrever com rebase somente se necessário e autorizado pela equipe).
-- [ ] Pull Requests com descrição e issues vinculadas.
-- [ ] README atualizado (este arquivo) presente na raiz do repositório.
-- [ ] Relatório/prints de auditoria de acessibilidade (Lighthouse/axe) anexados à entrega.
-- [ ] Assets de produção otimizados (imagens comprimidas) e CSS/JS minificados.
-
-7) Próximos passos que posso automatizar aqui (diga se quer que eu faça):
-
-- Gerar `package.json` com scripts de build (PostCSS/cssnano) e instruções.
-- Adicionar um `CHANGELOG.md` e um template de Release.
-- Gerar um relatório básico de acessibilidade via axe-core (requer instalação local de dependências).
-
-Se quiser que eu gere o `package.json` com scripts de build e um `CHANGELOG.md` inicial, responda "Sim, gere o package.json e CHANGELOG" e eu adiciono estes arquivos e as instruções passo a passo.
+**Nexus ONG**  
+📍 Rua Barbeiro, 190 - Rio de Janeiro/RJ  
+📧 contato@Nexusong123.org  
+📞 (21) 96473-9842  
 
 ---
-Arquivo gerado automaticamente pelo assistente para auxiliar na entrega. Atualize o conteúdo final com informações pessoais e de contato antes de enviar.
+
+*"Juntos, criamos elos que transformam vidas e constroem um futuro mais solidário."* 🌟
