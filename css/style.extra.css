@@ -1,0 +1,93 @@
+:root{}
+
+/* extra cute styles: form columns, confetti, chips, overlay, fav animation */
+.accessible-form{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem 1.25rem;
+    align-items: start;
+}
+.accessible-form .form-group{ grid-column: auto; }
+.accessible-form .form-group.full{ grid-column: 1 / -1; }
+
+.form-input,
+.form-textarea,
+.form-select{
+    background: linear-gradient(180deg, rgba(255,250,253,0.9), var(--bg));
+    border: 1px solid rgba(178,62,134,0.08);
+    box-shadow: 0 6px 18px rgba(178,62,134,0.04) inset;
+}
+
+.form-label{ display:flex; align-items:center; gap:0.5rem; }
+.form-label::before{
+    content: '🌸';
+    display:inline-block;
+    transform: translateY(1px);
+}
+
+.button.primary{
+    border-radius: 999px;
+    padding: 0.85rem 1.5rem;
+    box-shadow: 0 10px 30px rgba(178,62,134,0.12);
+    transform-origin: center;
+}
+
+/* confetti pieces created by JS */
+.confetti-piece{
+    position: fixed;
+    width: 10px;
+    height: 14px;
+    border-radius: 3px;
+    opacity: 0.95;
+    z-index: 12000;
+    pointer-events: none;
+    animation: confetti-fall 900ms linear forwards;
+}
+
+@keyframes confetti-fall{
+    0%{ transform: translateY(-10vh) rotate(0); opacity:1 }
+    100%{ transform: translateY(110vh) rotate(720deg); opacity:0 }
+}
+
+.tag-chip{
+    display: inline-block;
+    padding: 0.25rem 0.6rem;
+    border-radius: 999px;
+    background: linear-gradient(90deg, rgba(255,244,250,0.9), rgba(255,240,247,0.9));
+    border: 1px solid rgba(178,62,134,0.08);
+    color: var(--accent);
+    font-weight: 700;
+    font-size: 0.85rem;
+}
+
+.project-card{ position: relative; overflow: visible; }
+.project-card .card-media{ position: relative; overflow: hidden; border-bottom-left-radius: 12px; border-bottom-right-radius: 0; }
+
+.card-overlay{
+    position: absolute;
+    inset: 0;
+    display:flex;
+    align-items:flex-end;
+    justify-content:center;
+    background: linear-gradient(180deg, rgba(0,0,0,0) 40%, rgba(0,0,0,0.45) 100%);
+    color: white;
+    opacity: 0;
+    transition: opacity 220ms ease, transform 220ms ease;
+}
+
+.project-card:hover .card-overlay,
+.project-card:focus-within .card-overlay{ opacity: 1; }
+
+.heart-icon{ display:inline-block; font-size:1.1rem; transition: transform 260ms ease; }
+.fav-heart{ transition: transform 260ms ease, box-shadow 260ms ease; }
+.fav-heart.popped{ transform: scale(1.25); box-shadow: 0 8px 22px rgba(178,62,134,0.18); }
+
+/* subtle tilt on hover */
+.project-card .body{ transition: transform 280ms cubic-bezier(.2,.9,.3,1); }
+.project-card:hover .body{ transform: translateY(-6px); }
+
+/* responsive: form to single column */
+@media (max-width: 880px){
+    .accessible-form{ grid-template-columns: 1fr; }
+    .accessible-form .form-group.full{ grid-column: auto; }
+}
